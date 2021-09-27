@@ -59,11 +59,12 @@ public class PlayerController : MonoBehaviour
         if (theRB.velocity.x < 0)
         {
             theSR.flipX = true;
-        } else if (theRB.velocity.x > 0)
+        }
+        else if (theRB.velocity.x > 0)
         {
             theSR.flipX = false;
         }
-        
+
         anim.SetFloat("moveSpeed", System.Math.Abs(theRB.velocity.x));
         anim.SetBool("isGrounded", isGrounded);
     }

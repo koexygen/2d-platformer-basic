@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 // ReSharper disable InconsistentNaming
 
 public class CameraController : MonoBehaviour
@@ -11,6 +12,7 @@ public class CameraController : MonoBehaviour
     private Vector2 lastPos;
 
     public float minHeight, maxHeight;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +32,7 @@ public class CameraController : MonoBehaviour
         Vector2 amountToMove = new Vector2(position.x - lastPos.x, position.y - lastPos.y);
 
         farBackground.position += new Vector3(amountToMove.x, amountToMove.y, 0f);
-        midBackground.position += new Vector3(amountToMove.x , amountToMove.y, 0f) * 0.5f;
+        midBackground.position += new Vector3(amountToMove.x, amountToMove.y, 0f) * 0.5f;
 
         lastPos = position;
     }
